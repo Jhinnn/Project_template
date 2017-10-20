@@ -10,4 +10,8 @@
 
 @interface BaseTableViewController : BaseViewController
 
+@property (nonatomic, strong) UITableView *tableView;
+
+- (void)tableViewRegisterClass;
+
 @end

@@ -7,8 +7,8 @@
 //
 
 #import "BaseTableViewController.h"
-
-@interface BaseTableViewController ()
+#import "BaseTableViewCell.h"
+@interface BaseTableViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -17,6 +17,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view addSubview:self.tableView];
+}
+
+#pragma mark - UITableViewDataSource, UITableViewDelegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString * cellName = @"cell";
+    BaseTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellName];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.showsVerticalScrollIndicator = NO;
+        _tableView.alwaysBounceVertical = YES;
+        [_tableView registerClass:[BaseTableViewCell class] forCellReuseIdentifier:@"cell"];
+        [self tableViewRegisterClass];
+    }
+    return _tableView;
 }
 
 - (void)didReceiveMemoryWarning {
