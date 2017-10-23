@@ -16,7 +16,11 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    _imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)];
+    [_imageView addGestureRecognizer:tap];
+    
 }
 
 - (void)setModel:(HomeModel *)model {
@@ -26,10 +30,19 @@
     _contentLabel.text = _model.title;
 }
 
+- (void)imageClick:(UITapGestureRecognizer *)gr {
+    self.clickBlock(_model.title);
+}
+
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+    if([self.delegate respondsToSelector:@selector(imageClickAction:)]) {
+        [self.delegate imageClickAction:_model.path];
+    }
+    
+    
 }
 
 @end

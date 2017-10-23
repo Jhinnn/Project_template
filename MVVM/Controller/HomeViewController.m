@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "HomeViewModel.h"
 #import "HomeTableViewCell.h"
-@interface HomeViewController ()
+@interface HomeViewController () <ImageClickDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @end
@@ -35,8 +35,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_indetity forIndexPath:indexPath];
+    cell.delegate = self;
+    cell.clickBlock = ^(NSString *title) {
+        NSLog(@"%@",title);
+    };
     cell.model = self.dataArr[indexPath.row];
     return cell;
+}
+
+- (void)imageClickAction:(NSString *)imagePath {
+    NSLog(@"%@",imagePath);
 }
 
 - (void)setupView {
@@ -51,7 +59,6 @@
     HomeViewModel *homeViewModel = [[HomeViewModel alloc] init];
     [homeViewModel handleDataWithSuccess:^(NSArray *arr) {
         [weakself.dataArr addObjectsFromArray:arr];
-        [weakself.dataArr addObjectsFromArray:arr];
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakself.tableView reloadData];
         });
@@ -59,8 +66,6 @@
     } failure:^(NSError *error) {
         
     }];
-    
-
 }
 
 - (void)tableViewRegisterClass {
@@ -68,23 +73,5 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"HomeTableViewCell" bundle:nil] forCellReuseIdentifier:_indetity];
 }
 
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

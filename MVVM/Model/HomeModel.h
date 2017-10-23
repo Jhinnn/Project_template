@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface HomeModel : JSONModel
+
 @property (nonatomic ,copy) NSString *state;
 
 @property (nonatomic ,copy) NSString *title;
 
 @property (nonatomic ,copy) NSString *path;
+
+
 
 @end

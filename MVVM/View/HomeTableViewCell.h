@@ -8,8 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeModel.h"
+
+typedef void(^ClickBlock)(NSString *title);
+
+@protocol ImageClickDelegate <NSObject>
+
+- (void)imageClickAction:(NSString *)imagePath;
+
+@end
+
 @interface HomeTableViewCell : UITableViewCell
 
 @property (nonatomic, assign) HomeModel *model;
+
+@property (nonatomic, weak) __weak id <ImageClickDelegate> delegate;
+
+@property (nonatomic, copy) ClickBlock  clickBlock;
 
 @end
