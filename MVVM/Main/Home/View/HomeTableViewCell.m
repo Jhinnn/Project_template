@@ -35,14 +35,14 @@
 }
 
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    if([self.delegate respondsToSelector:@selector(imageClickAction:)]) {
-        [self.delegate imageClickAction:_model.path];
-    }
-    
-    
-}
+//- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+//    [super setSelected:selected animated:animated];
+//
+//    if([self.delegate respondsToSelector:@selector(imageClickAction:)]) {
+//        [self.delegate imageClickAction:_model.path];
+//    }
+//    
+//    
+//}
 
 @end
