@@ -13,9 +13,11 @@
 #import "WB_NetApiMacro.h"
 #import "WB_NetApiConstant.h"
 
+
 #import "JSONModel.h"
 #import "UIImageView+WebCache.h"
-#import "BaseTableViewController.h"
+#import "CYLTabBarController.h"
+
 
 
 #endif /* ThridMacros_h */

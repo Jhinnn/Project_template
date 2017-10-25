@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "HomeViewController.h"
 #import "WB_NetApiConstant.h"
+#import "TabBarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,8 +20,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:[[HomeViewController alloc] init]];
-    self.window.rootViewController = navi;
+    
+    self.window.rootViewController = [[TabBarViewController alloc] init];
     
     [WB_NetApiConstant sharedInstance];
     

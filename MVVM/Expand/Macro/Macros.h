@@ -11,8 +11,8 @@
 #define CHINESE_SYSTEM(x) [UIFont fontWithName:CHINESE_FONT_NAME size:x]
 
 // MainScreen Height&Width&Bounds
-#define kScreenHeight      [[UIScreen mainScreen] bounds].size.height
-#define kScreenWidth       [[UIScreen mainScreen] bounds].size.width
+#define kScreenHeight    [[UIScreen mainScreen] bounds].size.height
+#define kScreenWidth     [[UIScreen mainScreen] bounds].size.width
 #define kScreenBounds [[UIScreen mainScreen] bounds]
 
 //等比例拉伸  A原值，B目标值，C原值
@@ -29,11 +29,6 @@
 #define TAB_BAR_HEIGHT (iPhoneX ? (49.f+34.f) : 49.f)
 // home indicator
 #define HOME_INDICATOR_HEIGHT (iPhoneX ? 34.f : 0.f)
-
-
-/// 第一个参数是当下的控制器适配iOS11 一下的，第二个参数表示scrollview或子类
-#define AdjustsScrollViewInsetNever(controller,view) if(@available(iOS 11.0, *)) {view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;} else if([controller isKindOfClass:[UIViewController class]]) {controller.automaticallyAdjustsScrollViewInsets = false;}
-    
 
 
 #ifdef DEBUG
@@ -62,21 +57,17 @@
 #define IS_NULL_CLASS(OBJECT) [OBJECT isKindOfClass:[NSNull class]]
 
 //色值
+
+//全局主色调 背景
+#define kGlobalColor [UIColor colorWithRed:40/255.0f green:120/255.0f blue:60/255.0f alpha:1]
+
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 #define RGB(r,g,b) RGBA(r,g,b,1.0f)
 
+
 #define COLOR_RGB(rgbValue,a) [UIColor colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0 green:((float)(((rgbValue) & 0xFF00)>>8))/255.0 blue: ((float)((rgbValue) & 0xFF))/255.0 alpha:(a)]
 
-
-
 #define HEXCOLOR(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0 green:((float)((hex & 0xFF00) >> 8)) / 255.0 blue:((float)(hex & 0xFF)) / 255.0 alpha:1]
-
-
-//线的颜色
-#define kLineColor HEXCOLOR(0xe5e5e5)
-
-#define ATLINECOLOR [UIColor colorWithRed:230.0/255.0f green:230.0/255.0f blue:230.0/255.0f alpha:1]
-
 
 #define NOTIF_ADD(n, f)     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(f) name:n object:nil]
 #define NOTIF_POST(n, o)    [[NSNotificationCenter defaultCenter] postNotificationName:n object:o]
@@ -136,19 +127,4 @@ dispatch_once( &once, ^{ __singleton__ = [[self alloc] init]; } ); \
 return __singleton__; \
 }
 
-
-#define UIColorFromString(string) [UIColor colorWithString:string]
-
-//全局主色调 背景
-#define kGlobalColor [UIColor colorWithRed:33/255.0 green:173/255.0 blue:56/255.0 alpha:1]
-
-#define kPinkRed [UIColor colorWithString:@"#FF4A4A"]
-
-#define kThreeLevelColor [UIColor colorWithString:@"#333"]
-
-#define kSixLevelColor [UIColor colorWithString:@"#666"]
-
-#define kNineLevelColor [UIColor colorWithString:@"#999"]
-
-#define kCCCLevelColor [UIColor colorWithString:@"#CCC"]
 

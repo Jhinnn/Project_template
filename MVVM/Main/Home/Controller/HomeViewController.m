@@ -12,17 +12,17 @@
 @interface HomeViewController () <ImageClickDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataArr;
+
 @end
 
 @implementation HomeViewController {
-    
     NSString *_indetity;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"MVVM";
+    self.title = @"首页";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupView];

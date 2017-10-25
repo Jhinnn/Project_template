@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HomeViewModel : NSObject
+@interface HomeViewModel : BaseViewModel
 
-- (void)handleDataWithSuccess:(void (^)(NSArray *arr))success failure:(void (^)(NSError *error))failure;
+
 
 @end

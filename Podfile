@@ -4,4 +4,5 @@ target “MVVM” do
 pod 'AFNetworking', '~> 3.0.4'
 pod 'SDWebImage'
 pod 'JSONModel'
+pod 'CYLTabBarController'
 end

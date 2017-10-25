@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,24 +20,24 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="07l-xN-Grc">
-                        <rect key="frame" x="0.0" y="0.0" width="219" height="122"/>
+                        <rect key="frame" x="8" y="13" width="187.5" height="97"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvV-WZ-9Ji">
-                        <rect key="frame" x="219" y="0.0" width="180" height="122"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvV-WZ-9Ji">
+                        <rect key="frame" x="203.5" y="13" width="187.5" height="97"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="EvV-WZ-9Ji" secondAttribute="bottom" id="2Kc-5g-wTG"/>
-                    <constraint firstAttribute="trailing" secondItem="EvV-WZ-9Ji" secondAttribute="trailing" id="5EQ-NT-mYN"/>
-                    <constraint firstItem="EvV-WZ-9Ji" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="K1C-IL-CiI"/>
-                    <constraint firstAttribute="trailing" secondItem="07l-xN-Grc" secondAttribute="trailing" constant="180" id="NmD-HH-t4u"/>
-                    <constraint firstItem="EvV-WZ-9Ji" firstAttribute="leading" secondItem="07l-xN-Grc" secondAttribute="trailing" id="RCP-er-FRU"/>
-                    <constraint firstItem="07l-xN-Grc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Voh-dX-Eip"/>
-                    <constraint firstItem="07l-xN-Grc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="acC-1R-KDE"/>
-                    <constraint firstAttribute="bottom" secondItem="07l-xN-Grc" secondAttribute="bottom" id="sjQ-Si-Bpa"/>
+                    <constraint firstItem="EvV-WZ-9Ji" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="4sL-CD-eWd"/>
+                    <constraint firstItem="07l-xN-Grc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="EJG-Vz-R92"/>
+                    <constraint firstItem="07l-xN-Grc" firstAttribute="bottom" secondItem="EvV-WZ-9Ji" secondAttribute="bottom" id="Iq4-VB-mUb"/>
+                    <constraint firstItem="07l-xN-Grc" firstAttribute="top" secondItem="EvV-WZ-9Ji" secondAttribute="top" id="Nv8-mW-Nfl"/>
+                    <constraint firstItem="EvV-WZ-9Ji" firstAttribute="leading" secondItem="07l-xN-Grc" secondAttribute="trailing" constant="8" symbolic="YES" id="Pah-tb-5vF"/>
+                    <constraint firstItem="EvV-WZ-9Ji" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="PdF-Te-nCa"/>
+                    <constraint firstItem="EvV-WZ-9Ji" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YbQ-Wj-yzf"/>
+                    <constraint firstItem="EvV-WZ-9Ji" firstAttribute="width" secondItem="07l-xN-Grc" secondAttribute="width" id="ZLE-1d-xdU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
