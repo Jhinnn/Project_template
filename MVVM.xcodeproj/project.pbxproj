@@ -40,6 +40,10 @@
 		8E7F52771FA179C3006BEACC /* TestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F52761FA179C3006BEACC /* TestBaseViewController.m */; };
 		8E7F52811FA19490006BEACC /* MVAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F52801FA193D2006BEACC /* MVAlertView.m */; };
 		8E7F52821FA1974A006BEACC /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F527C1FA19341006BEACC /* UIViewExt.m */; };
+		8E7F529D1FA1BFF4006BEACC /* NSObject+BeeProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F529C1FA1BF8E006BEACC /* NSObject+BeeProperty.m */; };
+		8E7F52A11FA1C093006BEACC /* NotificationName.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F52A01FA1C093006BEACC /* NotificationName.m */; };
+		8E7F52A21FA1CBB1006BEACC /* NSObject+BeeNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F52991FA1BF60006BEACC /* NSObject+BeeNotification.m */; };
+		8E7F52A51FA1CBEC006BEACC /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F52A31FA1CBEB006BEACC /* NSObject+Runtime.m */; };
 		8EAFAFF71F9EDDCE009BDB0D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFAFEA1F9EDD8F009BDB0D /* HomeViewController.m */; };
 		8EAFAFF81F9EDE6B009BDB0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFAFDD1F9EDD1C009BDB0D /* main.m */; };
 		8EAFAFF91F9EDE87009BDB0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFAFDB1F9EDD1C009BDB0D /* AppDelegate.m */; };
@@ -142,6 +146,16 @@
 		8E7F527D1FA19371006BEACC /* CategoryMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryMacros.h; sourceTree = "<group>"; };
 		8E7F527F1FA193D2006BEACC /* MVAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVAlertView.h; sourceTree = "<group>"; };
 		8E7F52801FA193D2006BEACC /* MVAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVAlertView.m; sourceTree = "<group>"; };
+		8E7F52971FA1BF60006BEACC /* NSObject+BeeNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+BeeNotification.h"; sourceTree = "<group>"; };
+		8E7F52981FA1BF60006BEACC /* NSNotificationCenter+MainThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+MainThread.m"; sourceTree = "<group>"; };
+		8E7F52991FA1BF60006BEACC /* NSObject+BeeNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BeeNotification.m"; sourceTree = "<group>"; };
+		8E7F529A1FA1BF60006BEACC /* NSNotificationCenter+MainThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+MainThread.h"; sourceTree = "<group>"; };
+		8E7F529B1FA1BF8D006BEACC /* NSObject+BeeProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+BeeProperty.h"; sourceTree = "<group>"; };
+		8E7F529C1FA1BF8E006BEACC /* NSObject+BeeProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BeeProperty.m"; sourceTree = "<group>"; };
+		8E7F529F1FA1C093006BEACC /* NotificationName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationName.h; sourceTree = "<group>"; };
+		8E7F52A01FA1C093006BEACC /* NotificationName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationName.m; sourceTree = "<group>"; };
+		8E7F52A31FA1CBEB006BEACC /* NSObject+Runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Runtime.m"; sourceTree = "<group>"; };
+		8E7F52A41FA1CBEC006BEACC /* NSObject+Runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
 		8EAFAFDA1F9EDD1C009BDB0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8EAFAFDB1F9EDD1C009BDB0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8EAFAFDD1F9EDD1C009BDB0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -240,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				8E7F527D1FA19371006BEACC /* CategoryMacros.h */,
+				8E7F52951FA1BF35006BEACC /* Fundation */,
 				8E7F52781FA19341006BEACC /* UIView */,
 				8E7F526C1FA176F0006BEACC /* UIKit */,
 			);
@@ -249,6 +264,7 @@
 		8E38CCE91F9EE1C4005F3C72 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				8E7F529E1FA1C08A006BEACC /* NotificationName */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -433,6 +449,38 @@
 				8E7F52801FA193D2006BEACC /* MVAlertView.m */,
 			);
 			path = MVAlertView;
+			sourceTree = "<group>";
+		};
+		8E7F52951FA1BF35006BEACC /* Fundation */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F52961FA1BF52006BEACC /* NSNotificationCenter */,
+			);
+			path = Fundation;
+			sourceTree = "<group>";
+		};
+		8E7F52961FA1BF52006BEACC /* NSNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F529A1FA1BF60006BEACC /* NSNotificationCenter+MainThread.h */,
+				8E7F52981FA1BF60006BEACC /* NSNotificationCenter+MainThread.m */,
+				8E7F52971FA1BF60006BEACC /* NSObject+BeeNotification.h */,
+				8E7F52991FA1BF60006BEACC /* NSObject+BeeNotification.m */,
+				8E7F529B1FA1BF8D006BEACC /* NSObject+BeeProperty.h */,
+				8E7F529C1FA1BF8E006BEACC /* NSObject+BeeProperty.m */,
+				8E7F52A41FA1CBEC006BEACC /* NSObject+Runtime.h */,
+				8E7F52A31FA1CBEB006BEACC /* NSObject+Runtime.m */,
+			);
+			path = NSNotificationCenter;
+			sourceTree = "<group>";
+		};
+		8E7F529E1FA1C08A006BEACC /* NotificationName */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F529F1FA1C093006BEACC /* NotificationName.h */,
+				8E7F52A01FA1C093006BEACC /* NotificationName.m */,
+			);
+			path = NotificationName;
 			sourceTree = "<group>";
 		};
 		8EAFAFB21F9EDA61009BDB0D /* Main */ = {
@@ -841,6 +889,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7F52A21FA1CBB1006BEACC /* NSObject+BeeNotification.m in Sources */,
+				8E7F529D1FA1BFF4006BEACC /* NSObject+BeeProperty.m in Sources */,
 				8E7F52821FA1974A006BEACC /* UIViewExt.m in Sources */,
 				8E7F52811FA19490006BEACC /* MVAlertView.m in Sources */,
 				8E7F526B1FA08FBB006BEACC /* Util.m in Sources */,
@@ -853,6 +903,7 @@
 				8E38CD1E1F9EE230005F3C72 /* YTKBatchRequestAgent.m in Sources */,
 				8E38CD1F1F9EE230005F3C72 /* YTKChainRequest.m in Sources */,
 				8E3789731F9F3AF90045F037 /* DiscoverNetApi.m in Sources */,
+				8E7F52A51FA1CBEC006BEACC /* NSObject+Runtime.m in Sources */,
 				8E38CD211F9EE230005F3C72 /* YTKNetworkAgent.m in Sources */,
 				8EFE9F7A1F9F2CAD004B928C /* AddressBookViewController.m in Sources */,
 				8E37897C1F9F3E050045F037 /* DiscoverModel.m in Sources */,
@@ -881,6 +932,7 @@
 				8EAFAFFA1F9EDEB2009BDB0D /* HomeModel.m in Sources */,
 				8EAFAFF91F9EDE87009BDB0D /* AppDelegate.m in Sources */,
 				8E37896C1F9F39E40045F037 /* DiscoverCollectionViewCell.m in Sources */,
+				8E7F52A11FA1C093006BEACC /* NotificationName.m in Sources */,
 				8EAFAFF81F9EDE6B009BDB0D /* main.m in Sources */,
 				8EAFAFF71F9EDDCE009BDB0D /* HomeViewController.m in Sources */,
 			);
