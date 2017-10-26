@@ -25,7 +25,7 @@
 }
 
 - (void)createView {
-    
+
     ViewBorderRadius(self, 8, 0, [UIColor clearColor]);
 
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.width, 45)];
@@ -91,9 +91,6 @@
         _backgroundView = [[UIView alloc] initWithFrame:kScreenBounds];
         _backgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
         _backgroundView.layer.masksToBounds = YES;
-        _backgroundView.userInteractionEnabled = YES;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-        [_backgroundView addGestureRecognizer:tap];
     }
     return _backgroundView;
 }
@@ -110,9 +107,7 @@
     } completion:nil];
 }
 
-- (void)tap:(UIGestureRecognizer *)gr {
-    [self closeView];
-}
+
 
 #pragma mark --关闭view
 - (void)closeView {
@@ -128,8 +123,8 @@
     [self closeView];
 }
 
-
 - (void)sendAction:(UIButton *)button {
+    [self closeView];
     if ([self.delegate respondsToSelector:@selector(requestEventAction:addStr:)]) {
         [self.delegate requestEventAction:self.remarkField.text addStr:self.msgField.text];
     }

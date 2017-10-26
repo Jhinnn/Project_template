@@ -30,8 +30,20 @@
     
     _titleArray = @[@"BaseViewController数据源，代理，自定义视图",@"",@"",@"",@"",@"",@"",@""];
     
+    [self observeNotification:[NotificationName network_succ]];
+    [self observeNotification:[NotificationName network_fail]];
+
     [self setupView];
     [self dataAccess];
+}
+
+
+ON_NOTIFICATION(notification) {
+    if ([notification.name isEqualToString:[NotificationName network_succ]]) {
+        NSLog(@"网络连接成功");
+    }else if ([notification.name isEqualToString:[NotificationName network_fail]]) {
+        NSLog(@"网络连接失败");
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

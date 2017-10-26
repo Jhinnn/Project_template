@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "WB_NetApiConstant.h"
 #import "TabBarViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,13 +21,19 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     
+  
     
     self.window.rootViewController = [[TabBarViewController alloc] init];
     
     [WB_NetApiConstant sharedInstance];
+
+    
     
     return YES;
 }
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

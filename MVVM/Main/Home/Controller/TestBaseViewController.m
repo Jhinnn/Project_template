@@ -19,13 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    // Do any additional setup after loading the view.
-//    self.title = @"BaseViewController测试";
-//    self.view.backgroundColor = [UIColor whiteColor];
+    [self observeNotification:[NotificationName network_succ]];
 
     [self setupView];
     
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [[NSNotificationCenter defaultCenter] postNotificationName:[NotificationName network_succ] object:nil];
 }
 
 - (void)setupView {
@@ -60,15 +60,13 @@
 }
 
 #pragma mark ---MVAlertView delegate
-- (void)requestEventAction:(UIButton *)button {
-    [self.mvAlertView closeView];
-    
-    NSLog(@"%@",self.mvAlertView.remarkField.text);
+- (void)requestEventAction:(NSString *)remakeStr addStr:(NSString *)addStr {
+    NSLog(@"%@ %@",remakeStr,addStr);
 }
 
 - (MVAlertView *)mvAlertView {
     if (!_mvAlertView) {
-        _mvAlertView = [[MVAlertView alloc] initWithFrame:CGRectMake(30, 200, kScreenWidth - 60, 220)];
+        _mvAlertView = [[MVAlertView alloc] initWithFrame:CGRectMake(24, 300, kScreenWidth - 48, 220)];
         _mvAlertView.backgroundColor = [UIColor whiteColor];
         _mvAlertView.delegate = self;
     }

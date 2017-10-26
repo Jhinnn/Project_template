@@ -10,5 +10,9 @@
 #define CategoryMacros_h
 
 #import "UIViewExt.h"
+#import "NSObject+BeeNotification.h"
+
+
+#import "NotificationName.h"
 
 #endif /* CategoryMacros_h */
