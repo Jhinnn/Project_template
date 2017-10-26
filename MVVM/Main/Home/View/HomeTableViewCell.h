@@ -21,6 +21,8 @@ typedef void(^ClickBlock)(NSString *title);
 
 @property (nonatomic, assign) HomeModel *model;
 
+@property (nonatomic, copy) NSString *title;
+
 @property (nonatomic, weak) __weak id <ImageClickDelegate> delegate;
 
 @property (nonatomic, copy) ClickBlock  clickBlock;

@@ -22,6 +22,25 @@ NSString * collectionCellIdentifier = @"cellIdentifier";
     [self.view addSubview:self.collectionView];
 }
 
+#pragma mark --setter
+- (void)setNeedRefresh:(BOOL)needRefresh {
+    _needRefresh = needRefresh;
+    if (_needRefresh) {
+        [self addRefreshHeader];
+    }
+}
+
+- (void)addRefreshHeader {
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefreshAction)];
+    self.collectionView.mj_header = header;
+}
+
+#pragma mark --子类覆盖
+- (void)headerRefreshAction {
+    
+}
+
+
 #pragma mark - UICollectionViewDelegate, DataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -49,10 +68,15 @@ NSString * collectionCellIdentifier = @"cellIdentifier";
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.itemSize = CGSizeMake((kScreenHeight - 40) / 3, (kScreenHeight - 40) / 3 + 50);
-        layout.minimumLineSpacing = 10;
-        layout.minimumInteritemSpacing = 10;
+//        layout.itemSize = CGSizeMake((kScreenHeight - 40) / 3, (kScreenHeight - 40) / 3 + 50);
+//        layout.minimumLineSpacing = 10;
+//        layout.minimumInteritemSpacing = 10;
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) collectionViewLayout:layout];
+        if (@available(iOS 11.0, *)) {
+            _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+            _collectionView.contentInset = UIEdgeInsetsMake(NAVIGATION_BAR_HEIGHT, 0, TAB_BAR_HEIGHT, 0);
+            _collectionView.scrollIndicatorInsets = _collectionView.contentInset;
+        }
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;

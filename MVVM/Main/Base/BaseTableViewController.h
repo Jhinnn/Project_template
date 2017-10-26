@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, assign) BOOL needRefresh;
+
 - (void)tableViewRegisterClass;
 
 @end

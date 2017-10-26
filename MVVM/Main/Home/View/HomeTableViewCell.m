@@ -12,14 +12,17 @@
     
     __weak IBOutlet UIImageView *_imageView;
     __weak IBOutlet UILabel *_contentLabel;
+    
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    _imageView.userInteractionEnabled = YES;
+//    _imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)];
     [_imageView addGestureRecognizer:tap];
+    
+
     
 }
 
@@ -27,7 +30,7 @@
     _model = model;
  
     [_imageView sd_setImageWithURL:[NSURL URLWithString:_model.path]];
-    _contentLabel.text = _model.title;
+    _contentLabel.text = self.title;
 }
 
 - (void)imageClick:(UITapGestureRecognizer *)gr {

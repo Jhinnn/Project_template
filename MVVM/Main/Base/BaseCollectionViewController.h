@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
+@property (nonatomic, assign) BOOL needRefresh;
+
 @end

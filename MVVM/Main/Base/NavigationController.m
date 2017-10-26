@@ -19,7 +19,16 @@
     self.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont fontWithName:@"Heiti SC" size:19],NSFontAttributeName, nil];
     
     self.navigationBar.barTintColor = kGlobalColor;
+    self.navigationBar.tintColor = [UIColor blackColor];
     // Do any additional setup after loading the view.
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (self.viewControllers.count > 0) { //self.viewControllers 为push过的controller数组
+        //第二级隐藏TabBar
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    [super pushViewController:viewController animated:animated];
 }
 
 - (void)didReceiveMemoryWarning {

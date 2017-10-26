@@ -30,10 +30,25 @@ static NSString *collectionIdentifier = @"diccellIfier";
 }
 
 - (void)setupView {
-    
+
     [self.view addSubview:self.collectionView];
+
     [self.collectionView registerNib:[UINib nibWithNibName:@"DiscoverCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:collectionIdentifier];
+    
+    //是否需要刷新
+    self.needRefresh = YES;
+    //第一次进入需要刷新
+    [self.collectionView.mj_header beginRefreshing];
 }
+
+- (void)headerRefreshAction {
+    NSLog(@"刷新了。。。。。。。");
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.collectionView.mj_header endRefreshing];
+    });
+}
+
+
 
 - (void)dataAccess {
     WS(weakself);

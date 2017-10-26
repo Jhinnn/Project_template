@@ -34,6 +34,12 @@
 		8E38CD241F9EE230005F3C72 /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E38CD101F9EE1C4005F3C72 /* YTKRequest.m */; };
 		8E38CD251F9EE29B005F3C72 /* YTKChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E38CD071F9EE1C4005F3C72 /* YTKChainRequestAgent.m */; };
 		8E6BC4BB1F999A0000FE5FEE /* MVVMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BC4BA1F999A0000FE5FEE /* MVVMUITests.m */; };
+		8E7F52621FA08ABA006BEACC /* BaseScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F52611FA08ABA006BEACC /* BaseScrollViewController.m */; };
+		8E7F52661FA08B6F006BEACC /* WriteMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F52641FA08B6F006BEACC /* WriteMsgViewController.m */; };
+		8E7F526B1FA08FBB006BEACC /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F52691FA08E22006BEACC /* Util.m */; };
+		8E7F52771FA179C3006BEACC /* TestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F52761FA179C3006BEACC /* TestBaseViewController.m */; };
+		8E7F52811FA19490006BEACC /* MVAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F52801FA193D2006BEACC /* MVAlertView.m */; };
+		8E7F52821FA1974A006BEACC /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7F527C1FA19341006BEACC /* UIViewExt.m */; };
 		8EAFAFF71F9EDDCE009BDB0D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFAFEA1F9EDD8F009BDB0D /* HomeViewController.m */; };
 		8EAFAFF81F9EDE6B009BDB0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFAFDD1F9EDD1C009BDB0D /* main.m */; };
 		8EAFAFF91F9EDE87009BDB0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFAFDB1F9EDD1C009BDB0D /* AppDelegate.m */; };
@@ -119,6 +125,23 @@
 		8E6BC4B61F999A0000FE5FEE /* MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6BC4BA1F999A0000FE5FEE /* MVVMUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMUITests.m; sourceTree = "<group>"; };
 		8E6BC4BC1F999A0000FE5FEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E7F52601FA08ABA006BEACC /* BaseScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseScrollViewController.h; sourceTree = "<group>"; };
+		8E7F52611FA08ABA006BEACC /* BaseScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseScrollViewController.m; sourceTree = "<group>"; };
+		8E7F52631FA08B6F006BEACC /* WriteMsgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteMsgViewController.h; sourceTree = "<group>"; };
+		8E7F52641FA08B6F006BEACC /* WriteMsgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteMsgViewController.m; sourceTree = "<group>"; };
+		8E7F52691FA08E22006BEACC /* Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		8E7F526A1FA08E23006BEACC /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		8E7F52701FA1772B006BEACC /* UIImage+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
+		8E7F52711FA1772B006BEACC /* UIImage+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
+		8E7F52751FA179C3006BEACC /* TestBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBaseViewController.h; sourceTree = "<group>"; };
+		8E7F52761FA179C3006BEACC /* TestBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBaseViewController.m; sourceTree = "<group>"; };
+		8E7F52791FA19341006BEACC /* UIView+Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Line.h"; sourceTree = "<group>"; };
+		8E7F527A1FA19341006BEACC /* UIView+Line.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Line.m"; sourceTree = "<group>"; };
+		8E7F527B1FA19341006BEACC /* UIViewExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		8E7F527C1FA19341006BEACC /* UIViewExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		8E7F527D1FA19371006BEACC /* CategoryMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryMacros.h; sourceTree = "<group>"; };
+		8E7F527F1FA193D2006BEACC /* MVAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVAlertView.h; sourceTree = "<group>"; };
+		8E7F52801FA193D2006BEACC /* MVAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVAlertView.m; sourceTree = "<group>"; };
 		8EAFAFDA1F9EDD1C009BDB0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8EAFAFDB1F9EDD1C009BDB0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8EAFAFDD1F9EDD1C009BDB0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -188,6 +211,8 @@
 				8E38CCC31F9EE0D1005F3C72 /* BaseViewController.m */,
 				8E3789661F9F382C0045F037 /* BaseCollectionViewController.h */,
 				8E3789671F9F382C0045F037 /* BaseCollectionViewController.m */,
+				8E7F52601FA08ABA006BEACC /* BaseScrollViewController.h */,
+				8E7F52611FA08ABA006BEACC /* BaseScrollViewController.m */,
 				8EFE9F3C1F9F2A67004B928C /* TabBarViewController.h */,
 				8EFE9F3D1F9F2A67004B928C /* TabBarViewController.m */,
 				8EFE9F3F1F9F2AA6004B928C /* NavigationController.h */,
@@ -214,6 +239,9 @@
 		8E38CCE81F9EE1C4005F3C72 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				8E7F527D1FA19371006BEACC /* CategoryMacros.h */,
+				8E7F52781FA19341006BEACC /* UIView */,
+				8E7F526C1FA176F0006BEACC /* UIKit */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -299,6 +327,7 @@
 		8E38CD111F9EE1C4005F3C72 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				8E7F52681FA08E17006BEACC /* Util */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -306,6 +335,7 @@
 		8E38CD121F9EE1D0005F3C72 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				8E7F527E1FA193C8006BEACC /* MVAlertView */,
 			);
 			name = Vender;
 			path = MVVM/Vender;
@@ -357,6 +387,52 @@
 				8E6BC4BC1F999A0000FE5FEE /* Info.plist */,
 			);
 			path = MVVMUITests;
+			sourceTree = "<group>";
+		};
+		8E7F52681FA08E17006BEACC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F526A1FA08E23006BEACC /* Util.h */,
+				8E7F52691FA08E22006BEACC /* Util.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		8E7F526C1FA176F0006BEACC /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F526D1FA176F0006BEACC /* UIImage */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		8E7F526D1FA176F0006BEACC /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F52701FA1772B006BEACC /* UIImage+Common.h */,
+				8E7F52711FA1772B006BEACC /* UIImage+Common.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		8E7F52781FA19341006BEACC /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F52791FA19341006BEACC /* UIView+Line.h */,
+				8E7F527A1FA19341006BEACC /* UIView+Line.m */,
+				8E7F527B1FA19341006BEACC /* UIViewExt.h */,
+				8E7F527C1FA19341006BEACC /* UIViewExt.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		8E7F527E1FA193C8006BEACC /* MVAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				8E7F527F1FA193D2006BEACC /* MVAlertView.h */,
+				8E7F52801FA193D2006BEACC /* MVAlertView.m */,
+			);
+			path = MVAlertView;
 			sourceTree = "<group>";
 		};
 		8EAFAFB21F9EDA61009BDB0D /* Main */ = {
@@ -434,6 +510,10 @@
 			children = (
 				8EAFAFE91F9EDD8F009BDB0D /* HomeViewController.h */,
 				8EAFAFEA1F9EDD8F009BDB0D /* HomeViewController.m */,
+				8E7F52751FA179C3006BEACC /* TestBaseViewController.h */,
+				8E7F52761FA179C3006BEACC /* TestBaseViewController.m */,
+				8E7F52631FA08B6F006BEACC /* WriteMsgViewController.h */,
+				8E7F52641FA08B6F006BEACC /* WriteMsgViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -761,10 +841,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7F52821FA1974A006BEACC /* UIViewExt.m in Sources */,
+				8E7F52811FA19490006BEACC /* MVAlertView.m in Sources */,
+				8E7F526B1FA08FBB006BEACC /* Util.m in Sources */,
 				8E38CD251F9EE29B005F3C72 /* YTKChainRequestAgent.m in Sources */,
 				8E38CD1C1F9EE230005F3C72 /* YTKBaseRequest.m in Sources */,
 				8EFE9F771F9F2C9C004B928C /* DiscoverViewController.m in Sources */,
 				8EFE9F3E1F9F2A67004B928C /* TabBarViewController.m in Sources */,
+				8E7F52661FA08B6F006BEACC /* WriteMsgViewController.m in Sources */,
 				8E38CD1D1F9EE230005F3C72 /* YTKBatchRequest.m in Sources */,
 				8E38CD1E1F9EE230005F3C72 /* YTKBatchRequestAgent.m in Sources */,
 				8E38CD1F1F9EE230005F3C72 /* YTKChainRequest.m in Sources */,
@@ -788,7 +872,9 @@
 				8E38CD1A1F9EE21D005F3C72 /* WB_UploadImageRequest.m in Sources */,
 				8E38CD1B1F9EE21D005F3C72 /* WB_NetApiConstant.m in Sources */,
 				8EAFAFFE1F9EDF6C009BDB0D /* HomeTableViewCell.xib in Sources */,
+				8E7F52771FA179C3006BEACC /* TestBaseViewController.m in Sources */,
 				8EAFAFFD1F9EDED0009BDB0D /* HomeNetApi.m in Sources */,
+				8E7F52621FA08ABA006BEACC /* BaseScrollViewController.m in Sources */,
 				8EAFAFFC1F9EDEC1009BDB0D /* HomeViewModel.m in Sources */,
 				8EAFAFFB1F9EDEB6009BDB0D /* HomeTableViewCell.m in Sources */,
 				8E3789791F9F3B9C0045F037 /* BaseViewModel.m in Sources */,

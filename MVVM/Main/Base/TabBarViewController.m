@@ -27,12 +27,12 @@
 #pragma mark ---设置tabbarController属性
 - (void)setupTabbarController {
     self.tabBarItemsAttributes = [self setupTabbarItemsAttributes];
-    self.viewControllers = [self ppViewControllers];
+    self.viewControllers = [self setupViewControllers];
     self.delegate = self;
 }
 
 #pragma mark ---创建控制器数组
-- (NSArray *)ppViewControllers {
+- (NSArray *)setupViewControllers {
     
     HomeViewController *homeVC = [[HomeViewController alloc] init];
     NavigationController *firstNavigationController = [[NavigationController alloc] initWithRootViewController:homeVC];
